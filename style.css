@@ -61,3 +61,27 @@ input[type="text"] {
     padding: 1rem;
     margin: 0.5rem;
 }
+
+.domains_container {
+    margin-top: 3rem;
+    background-color: #4545a1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 15%;
+}
+
+.domain_badge {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.domain_badge_availible {
+    color: #45a145;
+}
+
+.domain_badge_in_use {
+    color: #a14545;
+}
