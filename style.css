@@ -75,4 +75,5 @@ h1 {
 
 .domain_badge_in_use {
     color: #a14545;
+    cursor: pointer;
 }

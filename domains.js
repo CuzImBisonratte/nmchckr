@@ -1339,12 +1339,15 @@ const domain_container = document.getElementById("domain_container");
 
 function lookUpDomain(domain) {
     domain_container.innerHTML = "<h1>Domain Availibility</h1>";
+    var i = 0;
     domains.forEach((value, index) => {
+        i++;
         fetch("https://dns.google/resolve?name=" + domain + "." + value, { method: "GET", headers: {} }).then((res) => {
             res.text().then((text) => {
                 body = JSON.parse(text).Status;
                 var domain_badge = document.createElement("div");
                 domain_badge.classList.add("domain_badge");
+                domain_badge.id = "domain_badge_" + i;
                 if (body == 3) {
                     domain_badge.classList.add("domain_badge_availible");
                 } else {
@@ -1353,6 +1356,11 @@ function lookUpDomain(domain) {
                 domain_badge.id = "domain_badge_" + value;
                 domain_badge.innerText = domain + "." + value;
                 domain_container.appendChild(domain_badge);
+                if (body != 3) {
+                    domain_badge.addEventListener("click", (e) => {
+                        window.open("https://" + domain + "." + value, '_blank').focus();
+                    });
+                }
             });
         });
     });
