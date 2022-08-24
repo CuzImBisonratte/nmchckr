@@ -62,6 +62,12 @@ input[type="text"] {
     margin: 0.5rem;
 }
 
+h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .domains_container {
     margin-top: 3rem;
     background-color: #4545a1;
