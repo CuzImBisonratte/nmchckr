@@ -1,3 +1,3 @@
 function lookup(name) {
-    console.log(name);
+    lookUpDomain(name);
 }

@@ -1337,7 +1337,7 @@ const domains = [
 
 const domain_container = document.getElementById("domain_container");
 
-function lookUpDomains(domain) {
+function lookUpDomain(domain) {
     domain_container.innerHTML = "<h1>Domain Availibility</h1>";
     domains.forEach((value, index) => {
         fetch("https://dns.google/resolve?name=" + domain + "." + value, { method: "GET", headers: {} }).then((res) => {
