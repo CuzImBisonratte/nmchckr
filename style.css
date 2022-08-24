@@ -47,21 +47,6 @@ input[type="text"] {
     border-top-right-radius: 1rem;
 }
 
-.usernames_container {
-    background-color: #4545a1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 15%;
-}
-
-.username_badge {
-    font-size: 1rem;
-    padding: 1rem;
-    margin: 0.5rem;
-}
-
 h1 {
     display: block;
     width: 100%;
